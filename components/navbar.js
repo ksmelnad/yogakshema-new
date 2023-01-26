@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Login from "./login-btn";
+import Image from "next/image";
+import logo from "@/public/logo-big.png";
 
 export default function Navbar() {
   const navigation = ["Programs", "Blogs & Podcasts", "About", "Contact"];
@@ -8,6 +10,13 @@ export default function Navbar() {
     <div className="w-full">
       <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-0">
         <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
+          <Image
+            src={logo}
+            width="50"
+            height="50"
+            alt="Logo"
+            className="mx-2"
+          />
           <Link
             href="/"
             className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100"

@@ -1,5 +1,7 @@
 import React from "react";
 import Container from "./container";
+import logoBig from "@/public/logo-big.png";
+import Image from "next/image";
 
 function Hero() {
   return (
@@ -21,6 +23,9 @@ function Hero() {
             </button>
           </div>
         </div>
+      </div>
+      <div>
+        <Image src={logoBig} width="500" height="500" alt="Logo" />
       </div>
     </div>
   );

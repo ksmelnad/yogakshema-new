@@ -4,7 +4,7 @@ import SectionTitle from "@/components/sectionTitle";
 function About() {
   return (
     <div>
-      <SectionTitle title="Vission" align="left">
+      <SectionTitle title="Vision" align="left">
         So as to fill the gap in the modern education system, Yogakshema will
         enable the young and energetic minds to understand lacunas of modern
         lifestyle management and empower them through Indic Wisdom to Develop

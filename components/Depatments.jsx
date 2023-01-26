@@ -6,7 +6,7 @@ function Depatments() {
   return (
     <div className="container mx-auto px-5 pt-20">
       <div className="text-center text-sm font-bold pb-10 tracking-wider text-indigo-600 uppercase">
-        Out Departments
+        Our Departments
       </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4 pt-5 pb-10 lg:pt-5 lg:pb-20 cursor: auto;">
         <div className="p-6 bg-gray-100 rounded-lg">

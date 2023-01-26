@@ -6,7 +6,7 @@ import { PortableText } from "@portabletext/react";
 import { getServerSideProps } from "@/lib/programs";
 
 function Programs({ programs }) {
-  // console.log("Programs: ", programs);
+  console.log("Programs: ", programs);
   return (
     <div className="container mx-auto px-20 background-color:rgb(255, 255, 255)">
       <div className="text-center text-sm font-bold pb-10 tracking-wider text-indigo-600 uppercase">

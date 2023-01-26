@@ -11,6 +11,7 @@ import { PortableText } from "@portabletext/react";
 import { getServerSideProps } from "@/lib/programs";
 import Programs from "./programs";
 import Newsletter from "@/components/newsletter";
+import Mentors from "@/components/Mentors";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function Home({ programs }) {
       <Hero />
       <Depatments />
       <Programs programs={programs} />
+      <Mentors />
       <Newsletter />
       {/* </div> */}
     </>

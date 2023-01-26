@@ -6,8 +6,23 @@ function Contact() {
     <div className="flex flex-grow">
       <Container>
         <div className="flex justify-around">
-          <div>
-            <span className="text-2xl font-bold text-gray-700">Address </span>
+          <div className="">
+            <div>
+              <span className="text-2xl font-bold text-gray-700">Address </span>
+            </div>
+            <div>
+              <span className="text-xl text-gray-700">
+                Yogakshema Gurukulam{" "}
+              </span>
+            </div>
+            <div>
+              <span className="text-xl text-gray-700">
+                Mysuru, Karnataka, India
+              </span>
+            </div>
+            <div>
+              <span className="text-xl text-gray-700">Ph: 1234567890</span>
+            </div>
           </div>
           <div>
             <form className="w-full max-w-lg">
@@ -20,14 +35,11 @@ function Contact() {
                     First Name
                   </label>
                   <input
-                    className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                    className="appearance-none block w-full bg-gray-200 text-gray-700 border  border-gray-200  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                     id="grid-first-name"
                     type="text"
                     placeholder="Jane"
                   />
-                  <p className="text-red-500 text-xs italic">
-                    Please fill out this field.
-                  </p>
                 </div>
                 <div className="w-full md:w-1/2 px-3">
                   <label
@@ -57,9 +69,6 @@ function Contact() {
                     id="email"
                     type="email"
                   />
-                  <p className="text-gray-600 text-xs italic">
-                    Some tips - as long as needed
-                  </p>
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mb-6">
@@ -74,16 +83,12 @@ function Contact() {
                     className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
                     id="message"
                   ></textarea>
-                  <p className="text-gray-600 text-xs italic">
-                    Re-size can be disabled by set by resize-none / resize-y /
-                    resize-x / resize
-                  </p>
                 </div>
               </div>
               <div className="md:flex md:items-center">
                 <div className="md:w-1/3">
                   <button
-                    className="shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+                    className="shadow bg-indigo-400 hover:bg-indigo-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                     type="button"
                   >
                     Send

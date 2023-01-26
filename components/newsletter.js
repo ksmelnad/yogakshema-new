@@ -2,34 +2,13 @@ import React from "react";
 
 function Newsletter() {
   return (
-    <div className="container px-4 mx-auto bg-gray-300">
+    <div className="w-full px-4 py-6 mx-auto bg-indigo-50">
       <div className="text-center max-w-xl mx-auto">
-        <div className="mb-6 relative mx-auto w-16 h-16 bg-indigo-600 rounded-full">
-          {/* <img className="absolute top-0 left-0" src="flaro-assets/images/applications/blur.svg" alt=""> */}
-          <div className="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2">
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.00098 13.3335L18.152 22.1008C19.2716 22.8473 20.7303 22.8473 21.85 22.1008L35.001 13.3335M8.33431 31.6668H31.6676C33.5086 31.6668 35.001 30.1744 35.001 28.3335V11.6668C35.001 9.82588 33.5086 8.3335 31.6676 8.3335H8.33431C6.49336 8.3335 5.00098 9.82588 5.00098 11.6668V28.3335C5.00098 30.1744 6.49336 31.6668 8.33431 31.6668Z"
-                stroke="white"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </svg>
-          </div>
-        </div>
-        <h2 className="mb-3 text-6xl md:text-7xl text-center font-bold font-heading tracking-px-n leading-tight">
+        <h2 className="mb-3 text-2xl md:text-2xl text-center font-bold font-heading tracking-px-n leading-tight">
           Join Our Newsletter
         </h2>
         <p className="mb-11 font-medium text-gray-600 leading-relaxed">
-          Lorem ipsum dolor sit amet, to the consectr adipiscing elit. Volutpat
-          tempor to the condimentum vitae vel purus.
+          Get weekly updates on what's going on at Yogakshema
         </p>
         <form className="mb-9">
           <div className="mb-5">
@@ -37,7 +16,7 @@ function Newsletter() {
               className="px-4 py-3 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"
               id="newsletterInput1-1"
               type="text"
-              placeholder="First &amp; last name"
+              placeholder="Full Name"
             />
           </div>
           <div className="mb-5">
@@ -45,7 +24,7 @@ function Newsletter() {
               className="px-4 py-3 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"
               id="newsletterInput1-2"
               type="text"
-              placeholder="Email address"
+              placeholder="Email Address"
             />
           </div>
           <button
