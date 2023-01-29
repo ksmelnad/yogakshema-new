@@ -5,15 +5,17 @@ import SectionTitle from "./sectionTitle";
 function Depatments() {
   return (
     <div className="container mx-auto px-5 pt-20">
-      <div className="text-center text-sm font-bold pb-10 tracking-wider text-indigo-600 uppercase">
-        Our Departments
+      <div className="w-25 text-center pb-10">
+        <h3 className=" text-md font-bold tracking-wider uppercase bg-gradient-to-r from-red-700 to-orange-100 text-transparent bg-clip-text">
+          Our Departments{" "}
+        </h3>
       </div>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4 pt-5 pb-10 lg:pt-5 lg:pb-20 cursor: auto;">
-        <div className="p-6 bg-gray-100 rounded-lg">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4 pt-5 pb-5 lg:pt-5 lg:pb-5 cursor: auto;">
+        <div className="p-6 rounded-lg">
           <div className="mb-5">
             <svg
-              className="hi-outline hi-template inline-block w-12 h-12 text-indigo-500"
-              stroke="currentColor"
+              className="hi-outline hi-template inline-block w-12 h-12"
+              stroke="orange"
               fill="none"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -30,18 +32,20 @@ function Depatments() {
           <h3 className="text-lg font-bold mb-2">Wellness</h3>
 
           <p className="text-sm leading-6 text-gray-600">
-            Metus potenti velit sollicitudin porttitor magnis elit lacinia
-            tempor varius, ut cras orci vitae parturient id nisi vulputate
-            consectetur, primis venenatis cursus tristique malesuada viverra
-            congue risus.
+            The wellness department focuses on helping individuals achieve
+            optimal physical, mental, and emotional health through the
+            principles of Ayurveda, yoga, nutrition, and self-care. Our team of
+            experts will guide you through the process of understanding your
+            body and mind and how to maintain balance through proper diet,
+            exercise, and stress management.
           </p>
         </div>
 
-        <div className="p-6 bg-gray-100 rounded-lg">
+        <div className="p-6 rounded-lg">
           <div className="mb-5">
             <svg
-              className="hi-outline hi-cube inline-block w-12 h-12 text-indigo-500"
-              stroke="currentColor"
+              className="hi-outline hi-cube inline-block w-12 h-12"
+              stroke="orange"
               fill="none"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -58,18 +62,19 @@ function Depatments() {
           <h3 className="text-lg font-bold mb-2">Wisdom</h3>
 
           <p className="text-sm leading-6 text-gray-600">
-            Metus potenti velit sollicitudin porttitor magnis elit lacinia
-            tempor varius, ut cras orci vitae parturient id nisi vulputate
-            consectetur, primis venenatis cursus tristique malesuada viverra
-            congue risus.
+            The wisdom department is dedicated to helping individuals develop
+            inner wisdom and spiritual growth through the study of Indian
+            philosophy, meditation, yoga, and spiritual practices. Our team of
+            experts will guide you through the process of self-discovery and
+            understanding the connection between the mind, body, and spirit.
           </p>
         </div>
 
-        <div className="p-6 bg-gray-100 rounded-lg cursor: auto;">
+        <div className="p-6  rounded-lg cursor: auto;">
           <div className="mb-5 cursor: auto;">
             <svg
-              className="hi-outline hi-cog inline-block w-12 h-12 text-indigo-500"
-              stroke="currentColor"
+              className="hi-outline hi-cog inline-block w-12 h-12"
+              stroke="orange"
               fill="none"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -92,18 +97,20 @@ function Depatments() {
           <h3 className="text-lg font-bold mb-2">Health</h3>
 
           <p className="text-sm leading-6 text-gray-600">
-            Metus potenti velit sollicitudin porttitor magnis elit lacinia
-            tempor varius, ut cras orci vitae parturient id nisi vulputate
-            consectetur, primis venenatis cursus tristique malesuada viverra
-            congue risus.
+            The health department is focused on helping individuals achieve
+            optimal physical health through the principles of Ayurveda, yoga,
+            nutrition, and traditional Indian medicine. Our team of experts will
+            guide you through the process of understanding your body and how to
+            maintain balance through proper diet, exercise, and traditional
+            medical practices.
           </p>
         </div>
 
-        <div className="p-6 bg-gray-100 rounded-lg">
+        <div className="p-6 rounded-lg">
           <div className="mb-5">
             <svg
-              className="hi-outline hi-sparkles inline-block w-12 h-12 text-indigo-500"
-              stroke="currentColor"
+              className="hi-outline hi-sparkles inline-block w-12 h-12"
+              stroke="orange"
               fill="none"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -120,10 +127,13 @@ function Depatments() {
           <h3 className="text-lg font-bold mb-2">Healing</h3>
 
           <p className="text-sm leading-6 text-gray-600">
-            Metus potenti velit sollicitudin porttitor magnis elit lacinia
-            tempor varius, ut cras orci vitae parturient id nisi vulputate
-            consectetur, primis venenatis cursus tristique malesuada viverra
-            congue risus.
+            The healing department is dedicated to helping individuals achieve
+            optimal physical, mental, and emotional health through the
+            principles of Ayurveda, yoga, traditional Indian medicine, and
+            spiritual practices. Our team of experts will guide you through the
+            process of understanding your body and mind, and how to maintain
+            balance through proper diet, exercise, meditation, and spiritual
+            practices.
           </p>
         </div>
       </div>

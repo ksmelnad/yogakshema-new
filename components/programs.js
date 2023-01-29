@@ -3,7 +3,16 @@ import { sanityConfig } from "@/lib/config";
 
 const client = sanityClient(sanityConfig);
 export const getServerSideProps = async (pageContext) => {
-  const query = `*[ _type == "program"]`;
+  const query = `*[_type == 'program'] {
+    title,
+      category -> {
+        title
+      },
+      author -> { name },
+      
+      slug,
+      body
+  }`;
   const programs = await client.fetch(query);
   // .then((res) => res.json());
   // console.log("Result:", result);

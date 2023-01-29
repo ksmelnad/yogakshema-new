@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import Head from "next/head";
 import sanityClient from "@sanity/client";
 import { PortableText } from "@portabletext/react";
 import Container from "@/components/container";
@@ -11,9 +11,21 @@ const client = sanityClient(sanityConfig);
 const Program = (program) => {
   return (
     <Container>
-      <div className="max-w-2xl px-8 py-4 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800 cursor: auto">
+      <div className="min-h-screen max-w-2xl mx-auto bg-white pt-20 rounded-lg dark:bg-gray-800 cursor: auto">
+        <Head>
+          <title>Yogakshema Gurukulam</title>
+          <meta
+            name="description"
+            content={`Yogakshema Gurukulam - ${program.program[0].title}`}
+          />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/logoIco.ico" />
+        </Head>
         <div className="mt-2 text-2xl font-bold text-gray-700 dark:text-white dark:hover:text-gray-200">
           {program.program[0].title}
+        </div>
+        <div className="pt-5 pb-5">
+          Dept. of {program.program[0].category.title}
         </div>
         <PortableText value={program.program[0].body} className="px-8" />
         {/* <div className="flex items-center"> */}
@@ -73,7 +85,8 @@ export const getServerSideProps = async (pageContext) => {
     body, 
     author -> {
       name
-    }
+    },
+    category -> { title }
   }`;
   const program = await client.fetch(query);
   // .then((res) => res.json());

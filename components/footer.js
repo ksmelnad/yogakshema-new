@@ -5,79 +5,92 @@ import Container from "./container";
 import logo from "@/public/logo-big.png";
 
 export default function Footer() {
-  const navigation = ["Product", "Features", "Pricing", "Company", "Blog"];
+  const navigation = {
+    "About Us": "/about",
+    Programs: "/programs",
+    "Blogs and Podcasts": "/blogs-podcasts",
+  };
   const legal = ["Terms", "Privacy", "Legal"];
   return (
-    <footer>
+    <footer className="pt-10 pb-20 bg-red-300">
       <Container>
-        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-10 mx-auto mt-5 border-t border-gray-100 dark:border-trueGray-700 lg:grid-cols-5">
+        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-1 mx-auto mt-5 dark:border-trueGray-700 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div>
-              {" "}
               <Link
                 href="/"
-                className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100"
+                className="flex keys-center space-x-2 font-medium dark:text-gray-100"
               >
-                <Image
-                  src={logo}
-                  width="50"
-                  height="50"
-                  alt="Logo"
-                  // className="mx"
-                />
-                <span>Yogakshema Gurukulam</span>
+                <h3 className="text-md font-bold tracking-wider uppercase text-gray-700 ">
+                  Yogakshema Gurukulam{" "}
+                </h3>
               </Link>
             </div>
+            <div>
+              <Image
+                src={logo}
+                width="100"
+                height="100"
+                alt="Logo"
+                // className="mx"
+              />
+            </div>
 
-            <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
+            <div className="max-w-md mt-4 text-gray-700 dark:text-gray-400">
               Yogakshema Gurukulam is a wholesome wellenss academy.
             </div>
 
-            <div className="mt-5">Copyright © {new Date().getFullYear()}.</div>
+            <div className="mt-5 text-gray-700">
+              Copyright © {new Date().getFullYear()}.
+            </div>
           </div>
 
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-              {navigation.map((item, index) => (
+              {Object.keys(navigation).map((key) => (
                 <Link
-                  key={index}
-                  href="/"
-                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
+                  key={key}
+                  href={navigation[key]}
+                  className="w-full px-4 py-2 text-gray-700 rounded-md dark:text-gray-300 hover:text-orange-100  dark:focus:bg-trueGray-700"
                 >
-                  {item}
+                  {key}
                 </Link>
               ))}
             </div>
           </div>
           <div>
             <div className="flex flex-wrap w-full -mt-2 -ml-3 lg:ml-0">
-              {legal.map((item, index) => (
+              {legal.map((key, index) => (
                 <Link
                   key={index}
                   href="/"
-                  className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
+                  className="w-full px-4 py-2 text-gray-700 rounded-md dark:text-gray-300 hover:text-orange-100 dark:focus:bg-trueGray-700"
                 >
-                  {item}
+                  {key}
                 </Link>
               ))}
             </div>
           </div>
           <div className="">
-            <div>Follow us</div>
-            <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
-              <a href="" target="_blank" rel="noopener">
+            <div className="text-gray-700">Follow us</div>
+            <div className="flex mt-5 space-x-5 text-gray-700 dark:text-gray-500">
+              <a href="" target="_blank" rel="noopener noreferrer">
                 <span className="sr-only">Facebook</span>
                 <Facebook />
               </a>
               <a
                 href="https://www.instagram.com/yogakshemagurukulam/"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <span className="sr-only">Instagram</span>
                 <Instagram />
               </a>
-              <a href="https://linkedin.com/" target="_blank" rel="noopener">
+              <a
+                href="https://linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="sr-only">Linkedin</span>
                 <Linkedin />
               </a>

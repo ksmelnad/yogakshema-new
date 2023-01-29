@@ -3,55 +3,66 @@ import Head from "next/head";
 import Link from "next/link";
 import Container from "@/components/container";
 import { PortableText } from "@portabletext/react";
-import { getServerSideProps } from "@/lib/programs";
+import { getServerSideProps } from "@/components/programs";
 
 function Programs({ programs }) {
-  console.log("Programs: ", programs);
+  // console.log("Programs: ", programs);
   return (
-    <div className="container mx-auto px-20 background-color:rgb(255, 255, 255)">
-      <div className="text-center text-sm font-bold pb-10 tracking-wider text-indigo-600 uppercase">
-        Our Programs
-      </div>
-      {programs.map((program, index) => {
-        return (
-          <div key={index}>
-            <div className="max-w-2xl px-8 py-4 mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800 cursor: auto">
-              <div className="flex items-center justify-between"></div>
-              <div className="mt-2">
-                <Link
-                  href={`/programs/${program.slug.current}`}
-                  className="mt-2 text-2xl font-bold text-gray-700 dark:text-white dark:hover:text-gray-200 hover:underline"
-                >
-                  {program.title}
-                </Link>
+    <>
+      <Head>
+        <title>Yogakshema Gurukulam</title>
+        <meta
+          name="description"
+          content="Yogakshema Gurukulam - A wholesome wellness academy"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/logoIco.ico" />
+      </Head>
 
-                <PortableText
-                  value={program.body}
-                  className="mt-2 text-gray-600 dark:text-gray-300"
-                />
-              </div>
-              <div className="flex items-center justify-between mt-4">
-                <Link
-                  href={`/programs/${program.slug.current}`}
-                  className="text-blue-600 dark:text-blue-400 hover:underline"
-                >
-                  Learn more ⟶
-                </Link>
-                <div className="flex items-center">
-                  <img
-                    src="https://stackdiary.com/140x100.png"
-                    alt="Author Photo"
-                    className="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block"
+      <div className="container mx-auto px-20 pt-20">
+        <div className="w-25 text-center pb-20">
+          <h3 className="text-md font-bold tracking-wider uppercase bg-gradient-to-r from-red-700 to-orange-100 text-transparent bg-clip-text">
+            Our Programs{" "}
+          </h3>
+        </div>
+
+        {programs.map((program, index) => {
+          return (
+            <div key={index}>
+              <div className="max-w-2xl px-4 py-4 mx-auto bg-white rounded-lg  dark:bg-gray-800 cursor: auto; hover:shadow-md">
+                <div className="flex items-center justify-between"></div>
+                <div className="mt-2">
+                  <Link
+                    href={`/programs/${program.slug.current}`}
+                    className="pb-5 text-2xl font-bold text-gray-700 dark:text-white dark:hover:text-gray-200 hover:underline"
+                  >
+                    {program.title}
+                  </Link>
+                </div>
+                <div className="pt-5 pb-5">
+                  Dept. of {program.category.title}
+                </div>
+                <div>
+                  <PortableText
+                    value={program.body}
+                    className="mt-2 text-gray-600 dark:text-gray-300"
                   />
-                  <a className="font-bold text-gray-700 cursor-pointer dark:text-gray-200"></a>
+                </div>
+                <div className="flex items-center justify-between mt-4">
+                  <Link
+                    href={`/programs/${program.slug.current}`}
+                    className="text-red-400 dark:text-blue-400 hover:underline"
+                  >
+                    Learn more ⟶
+                  </Link>
                 </div>
               </div>
+              <br />
             </div>
-            <br />
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+    </>
   );
 }
 

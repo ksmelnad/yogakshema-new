@@ -7,9 +7,15 @@ export default function Login() {
   if (session) {
     return (
       <div className="flex">
-        <img src={session.user.image} className="rounded w-10 h-10" />
+        <Image
+          src={session.user.image}
+          width="40"
+          height="40"
+          className="rounded"
+          alt="profile image"
+        />
         <button onClick={() => signOut()}>
-          <span className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
+          <span className="text-sm text-white uppercase tracking-wide px-6 py-2 bg-gray-800 rounded-md md:ml-5">
             Sign Out
           </span>
         </button>
@@ -20,7 +26,7 @@ export default function Login() {
     <>
       <li className="mr-3 nav__item">
         <button onClick={() => signIn()}>
-          <span className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
+          <span className="inline-block px-4 py-2 text-sm uppercase tracking-wide text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-orange-100 focus:text-red-600 focus:bg-white focus:outline-none dark:focus:bg-gray-800">
             Sign in
           </span>
         </button>
@@ -29,7 +35,7 @@ export default function Login() {
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
           <Link
             href="/"
-            className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5"
+            className="text-sm uppercase tracking-wide px-6 py-2 bg-white rounded-md md:ml-5"
           >
             Register
           </Link>

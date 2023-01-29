@@ -8,11 +8,11 @@ export default function App({ Component, pageProps, session }) {
   return (
     <>
       <SessionProvider session={session}>
-        <div className="flex flex-col h-screen">
-          <Navbar />
-          <Component {...pageProps} />
-          <Footer />
-        </div>
+        {/* <div className="flex flex-col h-screen"> */}
+        <Navbar />
+        <Component {...pageProps} />
+        <Footer />
+        {/* </div> */}
       </SessionProvider>
     </>
   );
