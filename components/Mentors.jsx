@@ -2,10 +2,10 @@ import React from "react";
 import Container from "./container";
 import SectionTitle from "./sectionTitle";
 import Image from "next/image";
-import aravindPic from "/Aravind.jpg";
-import lipiPic from "/Lipi.jpeg";
-import gayathriPic from "/Gayathri.jpeg";
-import anantaPic from "/Ananta.jpg";
+import aravindPic from "../public/Aravind.jpg";
+import lipiPic from "../public/Lipi.jpeg";
+import gayathriPic from "../public/Gayathri.jpeg";
+import anantaPic from "../public/Ananta.jpg";
 
 function Mentors() {
   const mentorsDetails = [

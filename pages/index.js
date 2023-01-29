@@ -11,7 +11,7 @@ import { PortableText } from "@portabletext/react";
 import { getServerSideProps } from "@/components/programs";
 import Programs from "./programs";
 import Newsletter from "@/components/newsletter";
-import Mentors from "@/components/Mentors";
+import Mentors from "@/components/Mentors.jsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
