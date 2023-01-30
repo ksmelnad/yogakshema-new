@@ -1,5 +1,4 @@
 import React from "react";
-import SectionTitle from "@/components/sectionTitle";
 import Head from "next/head";
 
 function About() {
@@ -14,12 +13,12 @@ function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logoIco.ico" />
       </Head>
-      <div className="w-25 text-center p-20">
+      <div className="w-25 text-center pt-10 pb-5">
         <h3 className="text-md font-bold tracking-wider uppercase bg-gradient-to-r from-red-700 to-orange-100 text-transparent bg-clip-text">
           About Us{" "}
         </h3>
       </div>
-      <div className="max-w-2xl mx-auto pb-20">
+      <div className="max-w-2xl mx-auto p-5">
         <div className="max-w-2xl mt-3 uppercase font-bold leading-snug tracking-wide text-gray-800 lg:leading-tight lg:text-lg dark:text-white">
           Vision
         </div>

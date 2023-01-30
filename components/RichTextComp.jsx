@@ -10,7 +10,7 @@ export const RichTextComp = {
     h3: ({ children }) => <h3 className="text-md">{children}</h3>,
 
     blockquote: ({ children }) => (
-      <blockquote className="p-5 border-l-purple-500">{children}</blockquote>
+      <blockquote className="p-5">{children}</blockquote>
     ),
 
     // Ex. 2: rendering custom styles
@@ -20,9 +20,7 @@ export const RichTextComp = {
   },
   marks: {
     // Ex. 1: custom renderer for the em / italics decorator
-    em: ({ children }) => (
-      <em className="text-gray-600 font-semibold">{children}</em>
-    ),
+    em: ({ children }) => <em>{children}</em>,
 
     // Ex. 2: rendering a custom `link` annotation
     link: ({ value, children }) => {
@@ -44,12 +42,10 @@ export const RichTextComp = {
   list: {
     // Ex. 1: customizing common list types
     bullet: ({ children }) => (
-      <ul className="list-disc pt-5 pb-5  space-y-3 space-x-5">{children}</ul>
+      <ul className="list-disc py-5 mx-6 space-y-3 space-x-5">{children}</ul>
     ),
     number: ({ children }) => (
-      <ol className="list-decimal pt-5 pb-5  space-y-3 space-x-5">
-        {children}
-      </ol>
+      <ol className="list-decimal pl-5 py-5">{children}</ol>
     ),
 
     // Ex. 2: rendering custom lists

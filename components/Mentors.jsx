@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "./container";
 import SectionTitle from "./sectionTitle";
 import Image from "next/image";
@@ -8,6 +8,15 @@ import gayathriPic from "../public/Gayathri.jpeg";
 import anantaPic from "../public/Ananta.jpg";
 
 function Mentors() {
+  const [fullProfile, setFullProfile] = useState({});
+
+  const handleClick = (id) => {
+    setFullProfile((prev) => ({
+      ...fullProfile,
+      [id]: !prev[id],
+    }));
+  };
+
   const mentorsDetails = [
     {
       name: "Aravind Prasad",
@@ -88,34 +97,55 @@ function Mentors() {
   ];
 
   return (
-    <div className="container mx-auto px-5 pt-20 pb-20">
-      <div className="w-25 text-center pb-10">
+    <div className="container mx-auto py-5 lg:py-20">
+      <div className="w-25 text-center">
         <h3 className="text-md font-bold tracking-wider uppercase bg-gradient-to-r from-red-700 to-orange-100 text-transparent bg-clip-text">
           Our Mentors{" "}
         </h3>
       </div>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 pt-5 pb-5 lg:pt-5 lg:pb-5"></div>
-      {mentorsDetails.map((person) => {
+      <div className="pt-5 pb-5"></div>
+      {mentorsDetails.map(({ name, pic, designation, profile }, index) => {
         return (
           <div
-            key={person.name}
-            className="grid grid-cols-2 gap-4 p-6 rounded-lg hover:shadow-lg  "
+            key={name}
+            className="grid grid-cols-1 p-6 rounded-lg hover:shadow-lg md:grid-cols-2"
           >
-            <div className="flex justify-center items-center mb-5 ">
+            <div className="flex justify-center items-center">
               <Image
-                src={person.pic}
+                src={pic}
                 width="250"
                 height="250"
                 className="rounded-lg border-none"
-                alt={person.name}
+                alt={name}
               />
             </div>
-            <div>
-              <h3 className="text-lg font-bold mb-2 ">{person.name}</h3>
-              <h3 className="">{person.designation}</h3>
-              <p className="text-sm leading-6 text-gray-600">
-                {person.profile}
+            <div className="pt-6">
+              <h3 className="text-lg font-bold mb-2 ">{name}</h3>
+              <h3 className="">{designation}</h3>
+              <p
+                className={
+                  fullProfile[`${index}`]
+                    ? "text-sm leading-6 text-gray-600 lg:line-clamp-none"
+                    : "line-clamp-4 text-sm leading-6 text-gray-600 lg:line-clamp-none"
+                }
+              >
+                {profile}
               </p>
+              {fullProfile[index] ? (
+                <button
+                  className="text-sm italic text-red-300 float-right lg:hidden"
+                  onClick={() => handleClick(index)}
+                >
+                  less
+                </button>
+              ) : (
+                <button
+                  className="text-sm italic text-red-300 float-right lg:hidden"
+                  onClick={() => handleClick(index)}
+                >
+                  more
+                </button>
+              )}
             </div>
           </div>
         );

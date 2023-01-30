@@ -9,6 +9,7 @@ export default function App({ Component, pageProps, session }) {
     <>
       <SessionProvider session={session}>
         {/* <div className="flex flex-col h-screen"> */}
+
         <Navbar />
         <Component {...pageProps} />
         <Footer />

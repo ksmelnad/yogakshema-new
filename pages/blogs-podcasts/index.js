@@ -27,13 +27,13 @@ export default function Index({ posts }) {
         <link rel="icon" href="/logoIco.ico" />
       </Head>
 
-      <div className="min-h-screen">
-        <div className="w-25 text-center p-20">
+      <div className="min-h-screen py-5">
+        <div className="w-25 text-center py-5">
           <h3 className="text-md font-bold tracking-wider uppercase bg-gradient-to-r from-red-700 to-orange-100 text-transparent bg-clip-text">
             Our Blogs and Podcasts{" "}
           </h3>
         </div>
-        <div className="container mx-auto pb-2 px-5 grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 py-5 px-5 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {posts.map((post, index) => {
             return (
               <div key={index}>

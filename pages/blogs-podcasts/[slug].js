@@ -25,25 +25,23 @@ const Post = (post) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logoIco.ico" />
       </Head>
-      <div className="min-h-screen container mx-auto">
-        <div className="max-w-2xl pt-20 mx-auto bg-white rounded-lg dark:bg-gray-800 cursor: auto">
+      <div className="min-h-screen container mx-auto max-w-2xl px-5">
+        <div className="max-w-2xl py-10 px-4 bg-white rounded-lg dark:bg-gray-800 cursor: auto">
           <div>
             <span className="text-sm font-light text-gray-600 dark:text-gray-400">
               <Date dateString={post.post[0]._createdAt} />
             </span>
           </div>
           <div>
-            <br />
             {post.post[0].mainImage ? (
               <Image
-                className="h-48 w-full object-cover"
+                className="h-48 py-5 w-full object-cover"
                 src={urlForImage(post.post[0].mainImage).url()}
                 alt="Main Image"
                 width={500}
                 height={300}
               />
             ) : null}
-            <br />
           </div>
           <div className="mt-2 text-2xl pb-5 font-bold text-gray-700 dark:text-white dark:hover:text-gray-200">
             {post.post[0].title}
@@ -75,9 +73,8 @@ const Post = (post) => {
             })}
           </div>
         </div>
-        <br />
 
-        <div className="max-w-2xl mx-auto py-16 border-t border-slate-200 dark:border-slate-200/5">
+        <div className="max-w-2xl mx-auto py-16 px-4 border-t border-slate-200 dark:border-slate-200/5">
           <h2 className="text-xl font-semibold text-slate-900 tracking-tight dark:text-white">
             Get all of our updates directly to your&nbsp;inbox.
             <br />

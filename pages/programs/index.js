@@ -19,8 +19,8 @@ function Programs({ programs }) {
         <link rel="icon" href="/logoIco.ico" />
       </Head>
 
-      <div className="container mx-auto px-20 pt-20">
-        <div className="w-25 text-center pb-20">
+      <div className="container py-5">
+        <div className="w-25 text-center py-5">
           <h3 className="text-md font-bold tracking-wider uppercase bg-gradient-to-r from-red-700 to-orange-100 text-transparent bg-clip-text">
             Our Programs{" "}
           </h3>
@@ -28,8 +28,8 @@ function Programs({ programs }) {
 
         {programs.map((program, index) => {
           return (
-            <div key={index}>
-              <div className="max-w-2xl px-4 py-4 mx-auto bg-white rounded-lg  dark:bg-gray-800 cursor: auto; hover:shadow-md">
+            <div key={index} className="sm:p-0">
+              <div className="max-w-2xl px-4 mx-auto bg-white rounded-lg sm:max-w-xl dark:bg-gray-800 cursor: auto; hover:shadow-md">
                 <div className="flex items-center justify-between"></div>
                 <div className="mt-2">
                   <Link

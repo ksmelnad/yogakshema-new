@@ -6,7 +6,7 @@ export default function Login() {
   const { data: session } = useSession();
   if (session) {
     return (
-      <div className="flex">
+      <div className="ml-2 flex gap-2">
         <Image
           src={session.user.image}
           width="40"
@@ -16,7 +16,7 @@ export default function Login() {
         />
         <button onClick={() => signOut()}>
           <span className="text-sm text-white uppercase tracking-wide px-6 py-2 bg-gray-800 rounded-md md:ml-5">
-            Sign Out
+            Sign&nbsp;Out
           </span>
         </button>
       </div>
@@ -24,22 +24,21 @@ export default function Login() {
   }
   return (
     <>
-      <li className="mr-3 nav__item">
-        <button onClick={() => signIn()}>
-          <span className="inline-block px-4 py-2 text-sm uppercase tracking-wide text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-orange-100 focus:text-red-600 focus:bg-white focus:outline-none dark:focus:bg-gray-800">
-            Sign in
-          </span>
+      <li>
+        <button
+          onClick={() => signIn()}
+          className="px-4 py-2 text-sm uppercase tracking-wide text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-orange-100 focus:text-red-600 focus:bg-white focus:outline-none dark:focus:bg-gray-800"
+        >
+          Sign in
         </button>
       </li>
-      <li className="mr-3 nav__item">
-        <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          <Link
-            href="/"
-            className="text-sm uppercase tracking-wide px-6 py-2 bg-white rounded-md md:ml-5"
-          >
-            Register
-          </Link>
-        </div>
+      <li>
+        <Link
+          href="/"
+          className="text-sm uppercase tracking-wide px-6 py-2 bg-white rounded-md lg:ml-5"
+        >
+          Register
+        </Link>
       </li>
     </>
   );

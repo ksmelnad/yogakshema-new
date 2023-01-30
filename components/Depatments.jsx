@@ -4,13 +4,13 @@ import SectionTitle from "./sectionTitle";
 
 function Depatments() {
   return (
-    <div className="container mx-auto px-5 pt-20">
-      <div className="w-25 text-center pb-10">
-        <h3 className=" text-md font-bold tracking-wider uppercase bg-gradient-to-r from-red-700 to-orange-100 text-transparent bg-clip-text">
+    <div className="container mx-auto py-10 md:py-20">
+      <div className="w-25 text-center">
+        <h3 className="text-md font-bold tracking-wider uppercase bg-gradient-to-r from-red-700 to-orange-100 text-transparent bg-clip-text">
           Our Departments{" "}
         </h3>
       </div>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4 pt-5 pb-5 lg:pt-5 lg:pb-5 cursor: auto;">
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4 md:pt-5 lg:pb-5 cursor: auto;">
         <div className="p-6 rounded-lg">
           <div className="mb-5">
             <svg

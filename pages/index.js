@@ -28,12 +28,13 @@ export default function Home({ programs }) {
         <link rel="icon" href="/logoIco.ico" />
       </Head>
       {/* <div className="flex felx-grow"> */}
-
-      <Hero />
-      <Depatments />
-      <Programs programs={programs} />
-      <Mentors />
-      <Newsletter />
+      <main>
+        <Hero />
+        <Depatments />
+        <Programs programs={programs} />
+        <Mentors />
+        <Newsletter />
+      </main>
     </>
   );
 }

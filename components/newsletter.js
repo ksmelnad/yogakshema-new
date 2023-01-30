@@ -30,7 +30,7 @@ function Newsletter() {
             />
           </div>
           <button
-            className="py-4 px-6 w-full text-white font-semibold border rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-red-400 hover:bg-red-500 transition ease-in-out duration-200"
+            className="py-4 px-6 w-full text-white font-semibold border rounded-xl shadow-4xl bg-red-400 hover:bg-red-500 transition ease-in-out duration-200"
             type="button"
           >
             Subscribe Now
