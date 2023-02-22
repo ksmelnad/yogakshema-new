@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Inter } from "@next/font/google";
-import Hero from "@/components/hero";
+import Hero from "@/components/Hero";
 import Depatments from "@/components/Depatments";
 import ProgramsComp from "@/components/ProgramsComp";
 import Newsletter from "@/components/Newsletter";
