@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Login from "./login-btn";
+import Login from "./Login";
 
 function MenuItems({ showMenu, active }) {
   const navigation = {
@@ -15,11 +15,11 @@ function MenuItems({ showMenu, active }) {
     <ul
       className={
         active
-          ? "flex flex-col items-center mt-10 fixed inset-0 left-1/4 gap-8 p-8 backdrop-blur-lg bg-red-300 lg:hidden"
+          ? "flex flex-col items-center mt-10 fixed inset-0 left-1/4 gap-8 p-8 backdrop-blur-lg bg-[#fefaf2] lg:hidden"
           : "hidden"
       }
     >
-      <div onClick={showMenu} className="cursor-pointer hover:text-orange-100">
+      <div onClick={showMenu} className="cursor-pointer hover:text-red-500">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"

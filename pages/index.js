@@ -1,17 +1,11 @@
-import Head from 'next/head'
-import Link from "next/link";
-import Image from "next/image";
+import Head from "next/head";
 import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
 import Hero from "@/components/hero";
 import Depatments from "@/components/Depatments";
-import sanityClient from "@sanity/client";
-import { sanityConfig } from "@/lib/config";
-import { PortableText } from "@portabletext/react";
-import { getServerSideProps } from "@/components/programs";
-import Programs from "./programs";
-import Newsletter from "@/components/newsletter";
-import Mentors from "@/components/Mentors.jsx";
+import ProgramsComp from "@/components/ProgramsComp";
+import Newsletter from "@/components/Newsletter";
+import Mentors from "@/components/Mentors";
+import { getServerSideProps } from "@/lib/programslib";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,11 +21,10 @@ export default function Home({ programs }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logoIco.ico" />
       </Head>
-      {/* <div className="flex felx-grow"> */}
       <main>
         <Hero />
         <Depatments />
-        <Programs programs={programs} />
+        <ProgramsComp programs={programs} />
         <Mentors />
         <Newsletter />
       </main>
@@ -39,8 +32,4 @@ export default function Home({ programs }) {
   );
 }
 
-export { getServerSideProps }; 
-
-
-
-
+export { getServerSideProps };

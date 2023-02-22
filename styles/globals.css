@@ -27,6 +27,6 @@ a {
 
 @layer components {
   .button {
-    @apply px-8 py-4 max-w-sm text-lg font-medium text-center bg-red-400 hover:bg-red-500 rounded-md
+    @apply px-4 py-2 max-w-sm  text-white text-center bg-red-400 hover:bg-red-500 rounded-l-full rounded-r-full
   }
 }

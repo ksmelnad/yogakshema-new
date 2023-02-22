@@ -1,9 +1,7 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
 import sanityClient from "@sanity/client";
 import { sanityConfig } from "@/lib/config";
 import { PortableText } from "@portabletext/react";
-import Container from "@/components/container";
 import Date from "@/components/date";
 import { urlForImage } from "@/lib/sanity";
 import { RichTextComp } from "@/components/RichTextComp";
@@ -12,8 +10,6 @@ import Image from "next/image";
 const client = sanityClient(sanityConfig);
 
 const Post = (post) => {
-  // console.log("Categories:", post.post[0].categories);
-
   return (
     <>
       <Head>
@@ -162,15 +158,11 @@ export const getServerSideProps = async (pageContext) => {
 
   const query = `*[ slug.current == "${pageSlug}" ]{
     title, 
-    categories[] -> {
-      title
-    },
+    categories[] -> { title },
     mainImage,
     body, 
     _createdAt,
-    author -> {
-      name
-    }
+    author -> { name }
   }`;
   const post = await client.fetch(query);
   // .then((res) => res.json());

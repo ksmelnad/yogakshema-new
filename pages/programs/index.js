@@ -1,12 +1,11 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import Container from "@/components/container";
+import styles from "../../styles/Home.module.css";
 import { PortableText } from "@portabletext/react";
-import { getServerSideProps } from "@/components/programs";
+import { getServerSideProps } from "@/lib/programslib";
 
 function Programs({ programs }) {
-  // console.log("Programs: ", programs);
   return (
     <>
       <Head>
@@ -18,7 +17,6 @@ function Programs({ programs }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logoIco.ico" />
       </Head>
-
       <div className="container py-5">
         <div className="w-25 text-center py-5">
           <h3 className="text-md font-bold tracking-wider uppercase bg-gradient-to-r from-red-700 to-orange-100 text-transparent bg-clip-text">
@@ -28,7 +26,7 @@ function Programs({ programs }) {
 
         {programs.map((program, index) => {
           return (
-            <div key={index} className="sm:p-0">
+            <div key={index} className="sm:p-0 ">
               <div className="max-w-2xl px-4 mx-auto bg-white rounded-lg sm:max-w-xl dark:bg-gray-800 cursor: auto; hover:shadow-md">
                 <div className="flex items-center justify-between"></div>
                 <div className="mt-2">

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import Container from "./container";
 import logo from "@/public/logo-big.png";
 
 export default function Footer() {
@@ -12,16 +11,16 @@ export default function Footer() {
   };
   const legal = ["Terms", "Privacy", "Legal"];
   return (
-    <footer className="pt-10 pb-20 bg-red-300">
-      <Container>
-        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-1 mx-auto mt-5 dark:border-trueGray-700 lg:grid-cols-5">
+    <footer className=" bg-[#f0f5f1]">
+      <div className="pt-10 pb-20 container px-4 mx-auto">
+        <div className="grid max-w-screen-xl grid-cols-1 gap-10 pt-1 mx-auto mt-5 dark:border-trueGray-600 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <div>
               <Link
                 href="/"
                 className="flex keys-center space-x-2 font-medium dark:text-gray-100"
               >
-                <h3 className="text-md font-bold tracking-wider uppercase text-gray-700 ">
+                <h3 className="text-md font-bold tracking-wider uppercase text-gray-600 ">
                   Yogakshema Gurukulam{" "}
                 </h3>
               </Link>
@@ -36,11 +35,11 @@ export default function Footer() {
               />
             </div>
 
-            <div className="max-w-md mt-4 text-gray-700 dark:text-gray-400">
+            <div className="max-w-md mt-4 text-gray-600 dark:text-gray-400">
               Yogakshema Gurukulam is a wholesome wellenss academy.
             </div>
 
-            <div className="mt-5 text-gray-700">
+            <div className="mt-5 text-gray-600">
               Copyright © {new Date().getFullYear()}.
             </div>
           </div>
@@ -51,7 +50,7 @@ export default function Footer() {
                 <Link
                   key={key}
                   href={navigation[key]}
-                  className="w-full px-4 py-2 text-gray-700 rounded-md dark:text-gray-300 hover:text-orange-100  dark:focus:bg-trueGray-700"
+                  className="w-full px-4 py-2 text-gray-600 rounded-md dark:text-gray-300 hover:text-black  dark:focus:bg-trueGray-600"
                 >
                   {key}
                 </Link>
@@ -64,7 +63,7 @@ export default function Footer() {
                 <Link
                   key={index}
                   href="/"
-                  className="w-full px-4 py-2 text-gray-700 rounded-md dark:text-gray-300 hover:text-orange-100 dark:focus:bg-trueGray-700"
+                  className="w-full px-4 py-2 text-gray-600 rounded-md dark:text-gray-300 hover:text-black dark:focus:bg-trueGray-600"
                 >
                   {key}
                 </Link>
@@ -72,8 +71,8 @@ export default function Footer() {
             </div>
           </div>
           <div className="">
-            <div className="text-gray-700">Follow us</div>
-            <div className="flex mt-5 space-x-5 text-gray-700 dark:text-gray-500">
+            <div className="text-gray-600">Follow us</div>
+            <div className="flex mt-5 space-x-5 text-gray-600 dark:text-gray-500">
               <a href="" target="_blank" rel="noopener noreferrer">
                 <span className="sr-only">Facebook</span>
                 <Facebook />
@@ -97,7 +96,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 }

@@ -2,13 +2,11 @@ import React from "react";
 
 function Newsletter() {
   return (
-    <div className="w-full px-4 py-6 mx-auto bg-orange-100">
+    <div className="w-full px-4 py-6 mx-auto bg-[#fefaf2]">
       <div className="text-center max-w-xl mx-auto">
-        <div className="w-25 text-center pb-10">
-          <h3 className="text-md font-bold tracking-wider uppercase bg-gradient-to-r from-red-700 to-orange-100 text-transparent bg-clip-text">
-            Join our Newsletter{" "}
-          </h3>
-        </div>
+        <h3 className="text-center pb-10 text-xl font-bold text-gray-700 tracking-wider uppercase ">
+          Join our Newsletter{" "}
+        </h3>
         <p className="mb-11 font-medium text-gray-600 leading-relaxed">
           Get weekly updates on what&apos;s going on at Yogakshema
         </p>

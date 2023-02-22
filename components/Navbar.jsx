@@ -1,10 +1,9 @@
 import Link from "next/link";
-import Login from "./login-btn";
+import Login from "./Login";
 import Image from "next/image";
 import logo from "@/public/logo-big.png";
 import { useState } from "react";
 import MenuItems from "./MenuItems";
-import { BeakerIcon } from "@heroicons/react/24/solid";
 
 export default function Navbar() {
   const navigation = {
@@ -20,7 +19,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-full bg-red-300 ">
+    <div className="w-full bg-[#fefaf2]">
       <nav className="container relative flex items-center justify-between py-6 mx-auto md:justify-between xl:px-0 uppercase tracking-wide text-sm">
         <div className="flex flex-around lg:w-auto">
           <Image
@@ -32,7 +31,7 @@ export default function Navbar() {
           />
           <Link
             href="/"
-            className="flex items-center space-x-2 text-lg lg:text-xl text-gray-800 font-medium  dark:text-gray-100"
+            className="flex items-center space-x-2 text-lg lg:text-xl text-gray-800 font-bold dark:text-gray-100"
           >
             Yogakshema&nbsp;Gurukulam
           </Link>
@@ -59,7 +58,7 @@ export default function Navbar() {
             <li key={key}>
               <Link
                 href={navigation[key]}
-                className="px-4 py-2 text-gray-800 rounded-md dark:text-gray-200 hover:text-orange-100 focus:text-gray-800 focus:bg-white focus:outline-none"
+                className="px-4 py-2 text-gray-600 rounded-md dark:text-gray-200 hover:text-black focus:text-gray-800 focus:bg-white focus:outline-none"
               >
                 {key}
               </Link>

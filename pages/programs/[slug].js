@@ -1,7 +1,6 @@
 import Head from "next/head";
 import sanityClient from "@sanity/client";
 import { PortableText } from "@portabletext/react";
-import Container from "@/components/container";
 import Date from "@/components/date";
 import { urlForImage } from "@/lib/sanity";
 import { sanityConfig } from "@/lib/config";
@@ -10,7 +9,7 @@ const client = sanityClient(sanityConfig);
 
 const Program = (program) => {
   return (
-    <div className="min-h-screen max-w-2xl  container mx-auto px-5 bg-white pt-20 rounded-lg dark:bg-gray-800 cursor: auto">
+    <div className="min-h-screen max-w-2xl container mx-auto px-5 bg-white pt-20 rounded-lg dark:bg-gray-800 cursor: auto">
       <Head>
         <title>Yogakshema Gurukulam</title>
         <meta

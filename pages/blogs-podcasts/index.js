@@ -101,13 +101,11 @@ export default function Index({ posts }) {
 export const getServerSideProps = async (pageContext) => {
   const query = `*[_type == 'post'] {
     title,
-      categories[] -> {
-        title
-      },
-      author -> { name },
-      mainImage,
-      slug,
-      _createdAt
+    categories[] -> { title },
+    author -> { name },
+    mainImage,
+    slug,
+    _createdAt
   }`;
   const posts = await client.fetch(query);
 
